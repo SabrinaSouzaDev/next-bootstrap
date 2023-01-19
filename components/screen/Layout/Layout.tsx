@@ -115,7 +115,7 @@ export default function LayoutComponent({ children }:any) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Application name
+            DPA
           </Typography>
         </Toolbar>
       </AppBar>
