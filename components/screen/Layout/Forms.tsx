@@ -1,8 +1,25 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@mui/material/TextField';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
-export default function Forms() {
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    paper: {
+      padding: theme.spacing(1),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    },
+  }),
+);
+
+export default function NestedGrid() {
+  const classes = useStyles();
   return (
     <Box
       component="form"
@@ -12,25 +29,23 @@ export default function Forms() {
       noValidate
       autoComplete="off"
     >
+       <React.Fragment>
       <div>
+      <Grid item xs={4}>
         <TextField
           required
           id="outlined-required"
           label="Required"
           defaultValue="Hello World"
         />
+        </Grid>
         <TextField
           disabled
           id="outlined-disabled"
           label="Disabled"
           defaultValue="Hello World"
         />
-        <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-        />
+        
         <TextField
           id="outlined-read-only-input"
           label="Read Only"
@@ -70,13 +85,7 @@ export default function Forms() {
           defaultValue="Hello World"
           variant="filled"
         />
-        <TextField
-          id="filled-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="filled"
-        />
+        
         <TextField
           id="filled-read-only-input"
           label="Read Only"
@@ -124,13 +133,7 @@ export default function Forms() {
           defaultValue="Hello World"
           variant="standard"
         />
-        <TextField
-          id="standard-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          variant="standard"
-        />
+        
         <TextField
           id="standard-read-only-input"
           label="Read Only"
@@ -163,6 +166,7 @@ export default function Forms() {
           variant="standard"
         />
       </div>
+      </React.Fragment>
     </Box>
   );
 }
