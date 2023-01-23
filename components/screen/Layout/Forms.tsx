@@ -5,6 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import { Card, CardHeader, Box, Paper, Grid, CardContent, CardActions, Button } from '@mui/material';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Typography from '@material-ui/core/Typography';
+import Stack from '@mui/material/Stack';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -225,8 +226,12 @@ export default function NestedGrid() {
     </Col>
     </CardContent>
     <CardActions className="d-flex justify-content-end align-items-center align-self-center flex-nowrap">
-    <Button size="small">Limpar</Button>
-        <Button size="small">Enviar</Button>
+    <Stack spacing={1} direction="row">
+    <Button size="large" color="success" variant="contained">Limpar</Button>
+    </Stack>
+    <Stack spacing={2} direction="row">
+        <Button size="large" variant="contained">Enviar</Button>
+      </Stack>
     </CardActions>
     </Card>
     </Row>
