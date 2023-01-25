@@ -1,3 +1,4 @@
+import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -25,7 +26,7 @@ import Box from '@mui/material/Box';
 import clsx from 'clsx';
 import { ReactNode, useState } from 'react';
 import Link from 'next/link';
-import LabelBottomNavigation from './Layouticon';
+import LabelBottomNavigation from '../Layouticon';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
