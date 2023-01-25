@@ -20,7 +20,7 @@
       "@/*": ["node_modules/@types/*","./src/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "src/pages/index.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts","**/*.tsx", "src/pages/index.jsx"],
   "exclude": ["node_modules"],
   
 }

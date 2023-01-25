@@ -5,8 +5,8 @@ export default function CopyrightComponent() {
     <Box mt={5}>
       <Typography variant="body2" color="textSecondary" align="center">
         {'Copyright © '}
-        <Link color="inherit" href="https://fabricadecodigo.com/" target="_blank">
-          Fábrica de Código
+        <Link color="inherit" href="#" target="_blank">
+          Sistemas DPA
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}

@@ -39,17 +39,19 @@ export default function NestedGrid() {
   const classes = useStyles();
   return (
     
-    <Container >
+    <Paper >
       <Row className="text-center">
       <Card>
-        
-        <CardHeader>
-        
-      <Typography paragraph>
+      <Box sx={{
+        '& .MuiTextField-root': { m: 1, width: '20h' },
+      }}>
+      <Col>
+      <Typography variant="h4" component="h2">
         Formulario
         </Typography>
+        </Col>
+        </Box>
         
-        </CardHeader>
         <CardContent>
         <Col>
     <Box
@@ -224,18 +226,15 @@ export default function NestedGrid() {
       </React.Fragment>
     </Box>
     </Col>
-    </CardContent>
-    <CardActions className="d-flex justify-content-end align-items-center align-self-center flex-nowrap">
+    <CardActions className="d-flex justify-content-end align-items-center align-self-center">
     <Stack spacing={1} direction="row">
-    <Button size="large" color="success" variant="contained">Limpar</Button>
-    </Stack>
-    <Stack spacing={2} direction="row">
         <Button size="large" variant="contained">Enviar</Button>
       </Stack>
     </CardActions>
+    </CardContent>
     </Card>
     </Row>
-    </Container>
+    </Paper>
     
   );
 }

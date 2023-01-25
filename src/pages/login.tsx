@@ -30,31 +30,31 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       flexWrap: 'wrap',
       minHeight: '100vh',
-      gap: theme.spacing(5),
+      gap: theme.spacing(2),
       padding: theme.spacing(2),
     },
     paper: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(2),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
     },
     avatar: {
-      margin: theme.spacing(1),
+      margin: theme.spacing(3),
       backgroundColor: theme.palette.secondary.main,
     },
     sloganTitle: {
-      marginBottom: theme.spacing(2),
+      marginBottom: theme.spacing(3),
     },
     form: {
       padding: theme.spacing(1),
       maxWidth: '500px',
     },
     submit: {
-      marginTop: theme.spacing(2),
+      marginTop: theme.spacing(4),
     },
     divider: {
-      margin: theme.spacing(4, 0),
+      margin: theme.spacing(2, 0),
     },
   })
 );
@@ -93,20 +93,20 @@ export default function LoginPage() {
       <div className={classes.root}>
    <div>
      
-     <Typography variant="h4" component="h2">
+     <Typography className={classes.sloganTitle} variant="h4" component="h2">
        FORMULÁIOS
      </Typography>
    </div>
    
-   <Paper className={classes.form} elevation={3}>
+   <Paper className={classes.form} elevation={4}>
      <CssBaseline />
      <Box sx={{
-            marginTop: 5,
+            marginTop: 1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}>
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 2, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
        <form noValidate onSubmit={formik.handleSubmit}>
@@ -140,7 +140,7 @@ export default function LoginPage() {
        <div className="d-flex p-4" >
        <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Lembrar senha"
             />
             </div>
        {/* <Divider className={classes.divider} variant="fullWidth" /> */}

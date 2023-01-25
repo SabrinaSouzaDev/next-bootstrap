@@ -1,3 +1,4 @@
+import * as React from 'react';
 import '../styles/globals.css'
 import { ThemeProvider } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';

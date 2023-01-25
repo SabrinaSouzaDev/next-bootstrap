@@ -1,4 +1,4 @@
-import { hydrate } from 'react-dom';
+
 import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
@@ -18,9 +18,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import ListIcon from '@material-ui/icons/List';
 import Box from '@mui/material/Box';
@@ -92,7 +90,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function LayoutWithMenuComponent({ children }) {
+export default function LayoutWithMenuComponent({ children }:any): JSX.Element{
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
