@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function LayoutWithMenuComponent({ children }:any): JSX.Element{
+export default function LayoutWithMenuComponent( {children}:any ): JSX.Element{
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function LayoutWithMenuComponent({ children }:any): JSX.Element{
   // menu
   const menu: Array<{ name: string; to: string; icon?: ReactNode }> = [
     { name: 'Formularios', to: '/', icon: <ImportContactsIcon/> },
-    { name: 'Entre em contato', to: '/customers', icon: <ListIcon/> },
+    { name: 'Entre em contato', to: '#', icon: <ListIcon/> },
   ];
 
   const handleDrawerOpen = () => {

@@ -42,9 +42,7 @@ export default function NestedGrid() {
     <Paper >
       <Row className="text-center">
       <Card>
-      <Box sx={{
-        '& .MuiTextField-root': { m: 1, width: '20h' },
-      }}>
+      <Box border="1px dashed grey" p={[2, 3, 4]} m={2}>
       <Col>
       <Typography variant="h4" component="h2">
         Formulario
@@ -56,11 +54,10 @@ export default function NestedGrid() {
         <Col>
     <Box
       component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '26h' },
-      }}
+      sx={{ border: "3px grey", m: 5 }}
       noValidate
-      autoComplete="off"
+      autoComplete="on"
+      columnGap={2}
     >
        <React.Fragment>
     <Grid className="align-content-lg-center" container spacing={1}>
@@ -81,13 +78,14 @@ export default function NestedGrid() {
           defaultValue="Hello World"
         />
         
-        <TextField
+        <TextField 
           id="outlined-read-only-input"
           label="Read Only"
           defaultValue="Hello World"
           InputProps={{
             readOnly: true,
           }}
+          
         />
         <TextField
           id="outlined-number"
@@ -147,6 +145,7 @@ export default function NestedGrid() {
       <Grid  item xs={12}>
         <div className="itemgrid">
         <TextField
+      
           required
           id="outlined-required"
           label="Required"
