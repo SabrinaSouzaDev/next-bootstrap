@@ -1,3 +1,4 @@
+import { hydrate } from 'react-dom';
 import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Divider from '@material-ui/core/Divider';
@@ -91,7 +92,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function LayoutWithMenuComponent({ children }:any) {
+export default function LayoutWithMenuComponent({ children }) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = useState(false);

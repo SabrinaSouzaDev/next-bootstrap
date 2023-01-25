@@ -2,7 +2,7 @@ import * as React from 'react';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LogoutIcon from '@mui/icons-material/Logout';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Link from 'next/link';
+// import Link from 'next/link';
 
 
 export default function LabelBottomNavigation() {
