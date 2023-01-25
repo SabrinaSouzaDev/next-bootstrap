@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       alignItems: 'center',
       flexWrap: 'wrap',
+      alignContent: 'center',
       minHeight: '100vh',
       gap: theme.spacing(2),
       padding: theme.spacing(2),
