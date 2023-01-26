@@ -6,6 +6,7 @@ import { Card, CardHeader, Box, Paper, Grid, CardContent, CardActions, Button } 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Typography from '@material-ui/core/Typography';
 import Stack from '@mui/material/Stack';
+import ResponsiveAppBar from '../../components/layout/Layout'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -38,7 +39,8 @@ const useStyles = makeStyles((theme: Theme) =>
 export default function NestedGrid() {
   const classes = useStyles();
   return (
-    
+    <>
+    <ResponsiveAppBar>
     <Paper >
       <Row className="text-center">
       <Card>
@@ -234,6 +236,7 @@ export default function NestedGrid() {
     </Card>
     </Row>
     </Paper>
-    
+    </ResponsiveAppBar>
+    </>
   );
 }

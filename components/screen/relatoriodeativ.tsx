@@ -7,45 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import PersonIcon from '@mui/icons-material/Person';
-import { ReactNode, useState } from 'react';
-import Link from 'next/link';
-import {
-  createStyles,
-  makeStyles,
-  Theme,
-  useTheme,
-} from '@material-ui/core/styles';
-import "bootstrap/dist/css/bootstrap.min.css";
-import clsx from 'clsx';
 
-const pages = ['Voltar'];
-const settings = ['Logout'];
+const pages = ['Products', 'Pricing', 'Blog'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-
-const useStyles= makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-    },
-    
-    hide: {
-      display: 'none',
-    },
-    
-    content: {
-      flexGrow: 1,
-      padding: theme.spacing(3),
-    },
-  })
-);
-
-
-function ResponsiveAppBar(): JSX.Element {
+function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -64,16 +35,11 @@ function ResponsiveAppBar(): JSX.Element {
     setAnchorElUser(null);
   };
 
-  const classes = useStyles();
-  const theme = useTheme();
-
   return (
-    <div className={classes.root}>
-    <AppBar position="static"
-     >
+    <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -89,18 +55,17 @@ function ResponsiveAppBar(): JSX.Element {
               textDecoration: 'none',
             }}
           >
-            DPA
+            LOGO
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="ReplyIcon"
+              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              
             >
               <MenuIcon />
             </IconButton>
@@ -146,7 +111,7 @@ function ResponsiveAppBar(): JSX.Element {
               textDecoration: 'none',
             }}
           >
-            DPA
+            LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -163,7 +128,7 @@ function ResponsiveAppBar(): JSX.Element {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <PersonIcon fontSize="large" />
+                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -192,8 +157,6 @@ function ResponsiveAppBar(): JSX.Element {
         </Toolbar>
       </Container>
     </AppBar>
-   
-    </div>
   );
 }
 export default ResponsiveAppBar;
