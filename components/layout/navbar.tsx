@@ -44,11 +44,11 @@ export default function MenuAppBar() {
           >
             <ReplyOutlinedIcon/>
           </IconButton>
-          <Typography 
-          component="a"
-          href="/"
-          size="large"
-          variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1 }}>
             DPA
           </Typography>
           {auth && (
@@ -57,7 +57,6 @@ export default function MenuAppBar() {
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
-                
                 aria-haspopup="true"
                 onClick={handleMenu}
                 color="inherit"
@@ -65,7 +64,6 @@ export default function MenuAppBar() {
                 <AccountCircle />
               </IconButton>
               <Menu
-              
                 id="menu-appbar"
                 anchorEl={anchorEl}
                 anchorOrigin={{
