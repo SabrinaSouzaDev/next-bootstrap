@@ -54,7 +54,7 @@ export default function MultipleSelectAtuacao() {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 180, mt: 3 }}>
+      <FormControl sx={{ m: 1, width: 200, mt: 3 }}>
         <Select
           multiple
           displayEmpty

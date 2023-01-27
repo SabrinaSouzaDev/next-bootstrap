@@ -8,12 +8,12 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 
 const ITEM_HEIGHT = 38;
-const ITEM_PADDING_TOP = 8;
+const ITEM_PADDING_TOP = 5;
 const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 150,
+      width: 160,
     },
   },
 };
@@ -56,7 +56,7 @@ export default function MultipleSelectArea() {
 
   return (
     
-      <FormControl sx={{ m: 1, width: 180, mt: 3 }}>
+      <FormControl sx={{ m: 1, width: 220, mt: 3 }}>
         <Select
           multiple
           displayEmpty

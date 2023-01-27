@@ -16,7 +16,6 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import MultipleSelectRegiao from '../../components/screen/Regiao'
 import MultipleSelectComarca from '../../components/screen/Comarca'
 import MultipleSelectNucleo from '../../components/screen/Nucleo'
-import MultipleSelectAtuacao from '../../components/screen/Atuacao'
 import MultipleSelectArea from '../../components/screen/Area'
 
 
@@ -50,21 +49,15 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function SelectLabels() {
-  const [Regiao, Comarca, Nucleo, Atuacao, Area ] = React.useState('');
+export default function SelectLabels() {  
   const classes = useStyles();
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
-  };
-
   return (
-   
     <Layout>
-
-    <Container className='mt-n5'>
+    <Container >
+      <Row>
      <Paper elevation={3}>
       <Row className="text-center">
-      <Card>
+      <Card >
       <Box border="1px dashed grey" p={[2, 3, 4]} m={2}>
       <Col>
       <Typography variant="h4" component="h2">
@@ -73,10 +66,10 @@ export default function SelectLabels() {
       </Col>
       </Box>
       <CardContent>
-      
       <Box
     sx={{
       display: 'flex',
+      justifyContent: 'center',
       flexWrap: 'wrap',
       '& > :not(style)': {
         m: 1,
@@ -84,35 +77,38 @@ export default function SelectLabels() {
       },
     }}
   >
-      <Paper elevation={3}>
-      <FormControl sx={{ m: 1, minWidth: 140 }}>
+      <Paper elevation={4}>
+      <FormControl sx={{ m: 1, minWidth: 190 }}>
       <MultipleSelectRegiao/>
       
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 140 }}>
+      <FormControl sx={{ m: 1, minWidth: 190 }}>
       
       <MultipleSelectComarca/>
       
         </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 140 }}>
-      <MultipleSelectNucleo/>
-      
+      <FormControl sx={{ m: 1, minWidth: 190 }}>
+      <MultipleSelectArea/>
         </FormControl>
 
-        <FormControl sx={{ m: 1, minWidth: 140 }}>
-        <MultipleSelectAtuacao/>
-      
+        <FormControl sx={{ m: 1, minWidth: 190 }}>
+        <MultipleSelectNucleo/>
         </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 140 }}>
-        <MultipleSelectArea/>
-        </FormControl>
+        {/* <FormControl sx={{ m: 1, minWidth: 140 }}>
+        </FormControl> */}
     </Paper>
     </Box>
+    <CardActions className="d-flex justify-content-end align-items-center align-self-center">
+    <Stack spacing={1} direction="row" className='mt-4'>
+        <Button size="large" variant="contained">Enviar</Button>
+    </Stack>
+    </CardActions>
     </CardContent>
     </Card>
-      </Row>
-      </Paper>
-      </Container>
+    </Row>
+    </Paper>
+    </Row>
+    </Container>
     </Layout>
    
   );

@@ -15,7 +15,9 @@ export default function Layout( {children}:any ): JSX.Element{
   return (
       <main>
       <ResponsiveAppBar />
+      <Container className='mt-5'>
         {children}
+        </Container>
       </main>
   );
 }
