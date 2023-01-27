@@ -1,0 +1,6 @@
+build
+cocerage
+.next
+package.json
+tsconfig.json
+next-env.d.ts
