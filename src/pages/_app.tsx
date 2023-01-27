@@ -10,6 +10,7 @@ import theme from '../../lib/theme';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
+  
   return (
     <>
       <Head>
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       
       <ThemeProvider theme={theme}>
         <CssBaseline />
+    
         <Component {...pageProps} />
+        
       </ThemeProvider>
       
     </>

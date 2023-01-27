@@ -5,7 +5,7 @@ import LoginPage from '../../src/pages/login';
 import { Container } from "@mui/system";
 import Box from '@material-ui/core/Box';
 // import LayoutWithMenuComponent from '../../components/layout/LayoutWithMenu/LayoutWithMenu'
-import ResponsiveAppBar from '../../components/layout/Layout'
+import ResponsiveAppBar from '../../components/layout/navbar'
 
 export default function Home() {
   return (
