@@ -16,6 +16,75 @@ const MenuProps = {
   },
 };
 
+interface Comarca{
+  id:number;
+  nome:string;
+  descricao:string;
+}
+
+interface Regional {
+  id:number;
+  nome:string;
+  descricao:String;
+  comarcas: Comarca[];
+}
+
+
+let regional: Regional[] = [
+  {
+    id: 1,
+    nome: "GUAJARÁ",
+    descricao: "Região Metropolitana",
+    comarcas: [
+      {
+        "id": 1,
+        "nome": "BELÉM",
+        "descricao": "Belém do Pará"
+      },
+      {
+        "id": 1,
+        "nome": "BENGUÍ",
+        "descricao": "Belém do Pará"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "nome": "TESTE 2",
+    "descricao": "Região Metropolitana",
+    "comarcas": [
+      {
+        "id": 1,
+        "nome": "TESTE 2.1",
+        "descricao": "Belém do Pará"
+      },
+      {
+        "id": 1,
+        "nome": "TESTE 2.3",
+        "descricao": "Belém do Pará"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "nome": "TESTE 3",
+    "descricao": "Região Metropolitana",
+    "comarcas": [
+      {
+        "id": 1,
+        "nome": "Teste3.1",
+        "descricao": "Belém do Pará"
+      },
+      {
+        "id": 1,
+        "nome": "TESTE 3.2",
+        "descricao": "Belém do Pará"
+      }
+    ]
+  }
+]
+
+
 const names = [
   'Oliver Hansen',
   'Van Henry',
@@ -56,7 +125,7 @@ export default function MultipleSelect() {
     <div>
       <FormControl sx={{ m: 1, width: 220, mt: 3 }}>
         <Select
-          multiple
+          // multiple
           displayEmpty
           value={personName}
           onChange={handleChange}
@@ -66,7 +135,7 @@ export default function MultipleSelect() {
               return <em>Região</em>;
             }
 
-            return selected.join(', ');
+            return selected;
           }}
           MenuProps={MenuProps}
           inputProps={{ 'aria-label': 'Without label' }}
@@ -74,13 +143,13 @@ export default function MultipleSelect() {
           <MenuItem disabled value="">
             <em>Região</em>
           </MenuItem>
-          {names.map((name) => (
+          {regional.map((regional) => (
             <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
+              key={regional.id}
+              value={regional.nome}
+              style={getStyles(regional.nome, personName, theme)}
             >
-              {name}
+              {regional.nome}
             </MenuItem>
           ))}
         </Select>
