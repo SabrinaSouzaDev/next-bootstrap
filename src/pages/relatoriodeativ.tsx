@@ -1,53 +1,43 @@
 import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import {
+  createStyles,
+  makeStyles,
+  Theme,
+  ThemeProvider
+} from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import {Row, Col} from 'react-bootstrap';
+import { Container, Box, Button } from '@mui/material';
+import Stack from '@mui/material/Stack';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
 
-export default function SelectLabels() {
-  const [age, setAge] = React.useState('');
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
-  };
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+      display: 'flex'
+    }
+  }),
+);
+
+export default function SelectLabels() { 
+  const classes = useStyles();
   return (
+     <Container component="main" className="d-flex justify-content-center align-items-center align-self-center">
+     <CssBaseline /> 
+     <Box sx={{ '& > :not(style)': { m: 1 } }}>
     <div>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>With label + helper text</FormHelperText>
-      </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <Select
-          value={age}
-          onChange={handleChange}
-          displayEmpty
-          inputProps={{ 'aria-label': 'Without label' }}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Without label</FormHelperText>
-      </FormControl>
+    <Fab variant="extended" color="primary" aria-label="add">
+        <NavigationIcon sx={{ mr: 1 }} />
+        Extended
+      </Fab>
     </div>
+    </Box>
+    </Container>
+    
   );
 }

@@ -73,25 +73,21 @@ export default function SelectLabels() {
       flexWrap: 'wrap',
       '& > :not(style)': {
         m: 1,
-        
       },
     }}
   >
-      <Paper elevation={4}>
-      <FormControl sx={{ m: 1, minWidth: 190 }}>
+      <Paper elevation={4} className="flex-row">
+      <FormControl sx={{ m: 1, minWidth: 180 }} >
       <MultipleSelectRegiao/>
-      
       </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 190 }}>
-      
+      <FormControl sx={{ m: 1, minWidth: 180 }}>
       <MultipleSelectComarca/>
-      
         </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 190 }}>
+      <FormControl sx={{ m: 1, minWidth: 180 }}>
       <MultipleSelectArea/>
         </FormControl>
 
-        <FormControl sx={{ m: 1, minWidth: 190 }}>
+        <FormControl sx={{ m: 1, minWidth: 180 }}>
         <MultipleSelectNucleo/>
         </FormControl>
         {/* <FormControl sx={{ m: 1, minWidth: 140 }}>
@@ -100,7 +96,7 @@ export default function SelectLabels() {
     </Box>
     <CardActions className="d-flex justify-content-end align-items-center align-self-center">
     <Stack spacing={1} direction="row" className='mt-4'>
-        <Button size="large" variant="contained">Enviar</Button>
+        <Button size="large" variant="contained">Salvar</Button>
     </Stack>
     </CardActions>
     </CardContent>
@@ -110,6 +106,5 @@ export default function SelectLabels() {
     </Row>
     </Container>
     </Layout>
-   
   );
 }
