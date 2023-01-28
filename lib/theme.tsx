@@ -9,11 +9,13 @@ export const roboto = Roboto({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
+
+
 // Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: blue[700],
+      main: blue[900],
       light: '#757ce8',
       dark: '#002884',
       contrastText: '#fff',

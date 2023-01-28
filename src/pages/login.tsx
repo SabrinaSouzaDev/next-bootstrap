@@ -94,7 +94,7 @@ export default function LoginPage() {
    <div>
      
      <Typography className={classes.sloganTitle} variant="h4" component="h2">
-       FORMULÁIOS
+       Relatorios DPA
      </Typography>
    </div>
    
