@@ -1,22 +1,17 @@
 import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Layout from '../../components/layout/LayoutWithMenu/Layout'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import TextField from '@mui/material/TextField';
 import {Container, Row, Col} from 'react-bootstrap';
-import { Card, CardHeader, Box, Paper, Grid, CardContent, CardActions, Button } from '@mui/material';
+import { Card, Box, Paper, CardContent, CardActions, Button } from '@mui/material';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Typography from '@material-ui/core/Typography';
 import Stack from '@mui/material/Stack';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import MultipleSelectRegiao from '../../components/screen/Regiao'
-import MultipleSelectComarca from '../../components/screen/Comarca'
-import MultipleSelectNucleo from '../../components/screen/Nucleo'
-import MultipleSelectArea from '../../components/screen/Area'
+
+import MultipleSelectRegiao from '../../components/screen/Regiao';
+import MultipleSelectComarca from '../../components/screen/Comarca';
+import MultipleSelectNucleo from '../../components/screen/Nucleo';
+import MultipleSelectArea from '../../components/screen/Area';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -96,7 +91,7 @@ export default function SelectLabels() {
     </Box>
     <CardActions className="d-flex justify-content-end align-items-center align-self-center">
     <Stack spacing={1} direction="row" className='mt-4'>
-        <Button size="large" variant="contained">Salvar</Button>
+        <Button className="text-decoration-none text-white" size="large" href="#contained-buttons" variant="contained">Salvar</Button>
     </Stack>
     </CardActions>
     </CardContent>

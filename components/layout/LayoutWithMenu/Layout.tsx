@@ -9,6 +9,10 @@ import {
 import ResponsiveAppBar from '../navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row } from 'react-bootstrap';
+import Copyright from "../../screen/Copyright/Copyright";
+import Footer from 'components/screen/Copyright/footer';
+
+
 
 export default function Layout( {children}:any ): JSX.Element{
 
@@ -18,6 +22,7 @@ export default function Layout( {children}:any ): JSX.Element{
       <Container className='mt-5'>
         {children}
         </Container>
+        <Footer/>
       </main>
   );
 }
