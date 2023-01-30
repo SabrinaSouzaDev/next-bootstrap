@@ -20,8 +20,8 @@ import Checkbox from "@mui/material/Checkbox";
 import Avatar from "@mui/material/Avatar";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';  
-import Copyright from "../../components/screen/Copyright/Copyright";
-import FormLoadingComponent from "../../components/screen/FormLoading/FormLoading";
+import Copyright from "../components/screen/Copyright/Copyright";
+import FormLoadingComponent from "../components/screen/FormLoading/FormLoading";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

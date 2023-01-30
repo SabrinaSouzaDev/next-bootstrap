@@ -11,8 +11,8 @@ import { useFormik } from 'formik';
 import NextLink from 'next/link';
 import React from 'react';
 import * as Yup from 'yup';
-import CopyrightComponent from '../../components/screen/Copyright/Copyright';
-import FormLoadingComponent from '../../components/screen/FormLoading/FormLoading';
+import CopyrightComponent from '../components/screen/Copyright/Copyright';
+import FormLoadingComponent from '../components/screen/FormLoading/FormLoading';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

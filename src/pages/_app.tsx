@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
-import theme from '../../lib/theme';
+import theme from '../lib/theme';
 
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FormControl from '@mui/material/FormControl';
-import Layout from '../../components/layout/LayoutWithMenu/Layout'
+import Layout from '../components/layout/LayoutWithMenu/Layout'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import {Container, Row, Col} from 'react-bootstrap';
 import { Card, Box, Paper, CardContent, CardActions, Button } from '@mui/material';
@@ -8,11 +8,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Typography from '@material-ui/core/Typography';
 import Stack from '@mui/material/Stack';
 
-import MultipleSelectRegiao from '../../components/screen/Regiao';
-import MultipleSelectComarca from '../../components/screen/Comarca';
-import MultipleSelectNucleo from '../../components/screen/Nucleo';
-import MultipleSelectArea from '../../components/screen/Area';
-import App from '../../components/app'
+import MultipleSelectRegiao from '../components/screen/Regiao';
+import MultipleSelectComarca from '../components/screen/Comarca';
+import MultipleSelectNucleo from '../components/screen/Nucleo';
+import MultipleSelectArea from '../components/screen/Area';
+import App from '../components/app'
 
 
 const useStyles = makeStyles((theme: Theme) =>

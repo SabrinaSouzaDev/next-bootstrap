@@ -10,7 +10,7 @@ import ResponsiveAppBar from '../navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row } from 'react-bootstrap';
 import Copyright from "../../screen/Copyright/Copyright";
-import Footer from 'components/screen/Copyright/footer';
+import Footer from '@/components/screen/Copyright/footer';
 
 
 
