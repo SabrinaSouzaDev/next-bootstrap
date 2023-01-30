@@ -12,6 +12,7 @@ import MultipleSelectRegiao from '../../components/screen/Regiao';
 import MultipleSelectComarca from '../../components/screen/Comarca';
 import MultipleSelectNucleo from '../../components/screen/Nucleo';
 import MultipleSelectArea from '../../components/screen/Area';
+import App from '../../components/app'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -73,7 +74,7 @@ export default function SelectLabels() {
   >
       <Paper elevation={4} className="flex-row">
       <FormControl sx={{ m: 1, minWidth: 180 }} >
-      <MultipleSelectRegiao/>
+      <App />
       </FormControl>
       <FormControl sx={{ m: 1, minWidth: 180 }}>
       <MultipleSelectComarca/>
